@@ -91,6 +91,29 @@ El asistente tiene "atajos" especiales llamados \textit{Slash commands} que le a
     \item \textbf{\texttt{/help}}: Úsalo si te sientes perdido; el asistente te mostrará una lista de todo lo que puede hacer.
 \end{itemize}
 
+\section{Ejemplo Práctico: Trabajando con Excel}
+\subsection{¿Puede la IA ayudarme con mis hojas de cálculo?}
+¡Por supuesto! Antigravity no solo escribe texto; también puede crear programas (en lenguajes como Python) para manipular archivos de Excel (\texttt{.xlsx} o \texttt{.csv}) automáticamente por ti.
+
+\subsection{Qué cosas le puedes pedir}
+Aquí tienes algunas tareas comunes que el asistente puede hacer con tus datos:
+\begin{itemize}
+    \item \textbf{Limpieza de datos:} "Lee el archivo \texttt{ventas.xlsx} y elimina todas las filas que tengan celdas vacías."
+    \item \textbf{Análisis rápido:} "Calcula el promedio de ventas por cada mes y dime cuál fue el mes con mayores ganancias."
+    \item \textbf{Crear gráficos:} "Usa los datos de la columna B para generar una gráfica de barras y guárdala como imagen."
+    \item \textbf{Combinar archivos:} "Toma estos tres archivos de Excel y únelos en uno solo."
+\end{itemize}
+
+\subsection{Cómo estructurar el prompt para Excel}
+Para que el asistente trabaje correctamente con tus archivos, recuerda la regla de \textit{Claridad + Contexto}:
+\begin{itemize}
+    \item \textbf{Menciona el archivo exacto:} Dale la ruta (ej. \texttt{C:/MisDocumentos/gastos.xlsx}) si es necesario.
+    \item \textbf{Sé específico con las columnas:} Usa los nombres de las columnas o las letras (ej. "suma los valores de la columna 'Precio'").
+\end{itemize}
+
+\textbf{Ejemplo de Prompt Excelente para Excel:}\\
+\textit{"Actúa como un analista de datos. Lee el archivo 'C:/usuarios/aldo/ventas.xlsx'. Este archivo tiene una columna llamada 'Categoría' y otra llamada 'Ingresos'. Escribe y ejecuta un código que sume los ingresos totales de la categoría 'Electrónica' y crea un nuevo archivo llamado 'resumen.xlsx' con el resultado."}
+
 \section{Resolución de Problemas (FAQ)}
 \subsection{¿Qué hago si el asistente no hace lo que quiero?}
 No te desesperes. Simplemente explícale qué hizo mal, como si se lo explicaras a un compañero de trabajo. Por ejemplo: "El color que usaste está muy oscuro, cámbialo a un azul más claro".
