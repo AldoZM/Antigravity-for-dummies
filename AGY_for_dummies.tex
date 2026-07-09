@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Antigravity CLI (AGY) for Dummies\\
+\large Guía definitiva para usar la terminal y tu asistente virtual}
+\author{Aldo Zetina}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este manual está diseñado para personas que nunca han utilizado una terminal o línea de comandos. Aquí aprenderás desde cómo abrir esa temida "pantalla negra" hasta cómo darle instrucciones claras (prompts) a tu asistente inteligente, Antigravity CLI (\texttt{agy}), para que realice tareas complejas por ti.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introducción al Mundo de la Terminal}
+\subsection{¿Qué es la terminal y por qué no hay que temerle?}
+La terminal (a veces llamada consola, línea de comandos o "esa pantalla negra con letras blancas") es simplemente una forma directa de hablar con tu computadora. En lugar de usar el ratón para hacer clic en íconos o botones, aquí escribimos comandos (texto) para pedirle a la computadora que haga cosas.
+
+\subsection{Cómo abrir la terminal en Windows}
+Para empezar a usar tu asistente, primero necesitas abrir la terminal. Sigue estos pasos:
+\begin{enumerate}
+    \item Presiona la tecla \textbf{Windows} en tu teclado (la que tiene el logo de Windows).
+    \item Escribe la palabra \texttt{PowerShell} o \texttt{cmd}.
+    \item Presiona \textbf{Enter}.
+\end{enumerate}
+Verás que se abre una ventana con un fondo de color sólido y un texto que parpadea. ¡Felicidades! Estás en la terminal.
+
+\section{Conociendo a tu Asistente: Antigravity (\texttt{agy})}
+\subsection{¿Qué es \texttt{agy}?}
+\texttt{agy} (Antigravity) es tu asistente personal inteligente que vive dentro de la terminal. Puede escribir código por ti, leer documentos, buscar en internet, crear archivos y mucho más.
+
+\subsection{Cómo despertar al asistente}
+Una vez que tengas la terminal abierta, simplemente escribe lo siguiente y presiona Enter:
+\begin{verbatim}
+agy
+\end{verbatim}
+La pantalla cambiará y verás un mensaje de bienvenida. A partir de este momento, ya no estás hablando con tu computadora de forma tradicional, ¡estás hablando con un asistente de inteligencia artificial avanzado!
+
+\subsection{Cómo cerrar el asistente}
+Cuando termines de trabajar y quieras despedirte de tu asistente, simplemente escribe \texttt{/exit} y presiona Enter, o presiona las teclas \texttt{Ctrl+D} dos veces. Esto te regresará a tu terminal normal.
+
+\section{El Arte de Pedir (Prompts)}
+\subsection{¿Qué es un "prompt"?}
+Un \textit{prompt} es simplemente la instrucción o pregunta que le escribes a tu asistente. Así de fácil.
+
+\subsection{La regla de oro: Claridad + Contexto}
+Para que el asistente haga un buen trabajo, no puedes darle instrucciones vagas. Mientras más detalles le des, mejor será el resultado.
+\begin{itemize}
+    \item \textbf{Mal prompt:} "Hazme una página web." (Es muy vago, el asistente no sabe de qué trata ni qué colores usar).
+    \item \textbf{Buen prompt:} "Crea una página web para una tienda de mascotas. Usa colores cálidos como naranja y amarillo, y pon un título que diga 'Mascotas Felices'."
+\end{itemize}
+
+\section{Asignando Tareas (Manos a la obra)}
+\subsection{Comandos especiales (Slash Commands)}
+El asistente tiene "atajos" especiales llamados \textit{Slash commands} que le ayudan a entender cómo quieres que trabaje. Siempre empiezan con una barra diagonal (\texttt{/}).
+
+\begin{itemize}
+    \item \textbf{\texttt{/plan}}: Úsalo cuando tengas una tarea muy grande y quieres que el asistente primero te presente un plan paso a paso antes de empezar a escribir código o hacer cambios.
+    \item \textbf{\texttt{/goal}}: Úsalo para tareas largas. Le dice al asistente que se concentre al 100\% en lograr el objetivo sin detenerse a preguntarte cosas a cada rato.
+    \item \textbf{\texttt{/help}}: Úsalo si te sientes perdido; el asistente te mostrará una lista de todo lo que puede hacer.
+\end{itemize}
+
+\section{Resolución de Problemas (FAQ)}
+\subsection{¿Qué hago si el asistente no hace lo que quiero?}
+No te desesperes. Simplemente explícale qué hizo mal, como si se lo explicaras a un compañero de trabajo. Por ejemplo: "El color que usaste está muy oscuro, cámbialo a un azul más claro".
+
+\subsection{¿Por qué veo mucho texto pasar rápido en la pantalla?}
+A veces, cuando el asistente está trabajando (por ejemplo, leyendo un archivo grande o instalando un programa), verás mucho texto en la pantalla. ¡Es normal! Déjalo terminar.
+
+\end{document}
