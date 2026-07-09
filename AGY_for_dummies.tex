@@ -52,14 +52,34 @@ Cuando termines de trabajar y quieras despedirte de tu asistente, simplemente es
 
 \section{El Arte de Pedir (Prompts)}
 \subsection{¿Qué es un "prompt"?}
-Un \textit{prompt} es simplemente la instrucción o pregunta que le escribes a tu asistente. Así de fácil.
+Un \textit{prompt} es simplemente la instrucción, petición o pregunta que le escribes a tu asistente en la terminal. Es tu forma de comunicarle exactamente qué quieres que haga.
 
-\subsection{La regla de oro: Claridad + Contexto}
-Para que el asistente haga un buen trabajo, no puedes darle instrucciones vagas. Mientras más detalles le des, mejor será el resultado.
+\subsection{La anatomía de un \textit{Prompt} Perfecto}
+Para que el asistente te dé resultados increíbles, no puedes darle instrucciones vagas. Un buen prompt suele tener tres ingredientes principales:
+\begin{enumerate}
+    \item \textbf{El Rol:} Dile al asistente cómo quieres que se comporte (ej. "Actúa como un profesor paciente", "Como experto en diseño gráfico...").
+    \item \textbf{La Tarea:} Qué es exactamente lo que quieres que haga (ej. "Escribe un resumen", "Crea un código", "Busca un error").
+    \item \textbf{El Contexto y Detalles:} Para quién es, qué tono usar, qué colores incluir, qué no hacer, etc.
+\end{enumerate}
+
+\subsection{Ejemplos prácticos: De malo a excelente}
+Veamos cómo mejora una misma instrucción cuando le damos más información:
+
 \begin{itemize}
-    \item \textbf{Mal prompt:} "Hazme una página web." (Es muy vago, el asistente no sabe de qué trata ni qué colores usar).
-    \item \textbf{Buen prompt:} "Crea una página web para una tienda de mascotas. Usa colores cálidos como naranja y amarillo, y pon un título que diga 'Mascotas Felices'."
+    \item \textbf{Mal prompt (Muy vago):}\\
+    \textit{"Hazme una página web."}\\
+    (El asistente no sabe de qué trata, ni qué colores usar, ni el objetivo).
+    
+    \item \textbf{Buen prompt (Claro pero sin detalles):}\\
+    \textit{"Crea una página web para una veterinaria. Usa colores cálidos como naranja y amarillo."}\\
+    (Mejor, pero el asistente todavía tendrá que inventar muchos detalles sobre la estructura).
+    
+    \item \textbf{Prompt Excelente (Claro + Contexto + Rol):}\\
+    \textit{"Actúa como un diseñador web experto. Crea la página de inicio para una veterinaria llamada 'Patitas'. El diseño debe ser moderno, usar colores naranja y amarillo, e incluir una sección de servicios (vacunas, baño, consultas). Escribe el código listo para usarse."}
 \end{itemize}
+
+\subsection{Consejo Pro: Divide y vencerás}
+Si tu tarea es gigantesca (como "Crea un videojuego completo"), ¡no se la pidas toda en un solo prompt! Es mejor pedirle que haga una parte, revisarla, y luego pedirle que continúe con la siguiente.
 
 \section{Asignando Tareas (Manos a la obra)}
 \subsection{Comandos especiales (Slash Commands)}
