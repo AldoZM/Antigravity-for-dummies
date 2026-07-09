@@ -91,28 +91,29 @@ El asistente tiene "atajos" especiales llamados \textit{Slash commands} que le a
     \item \textbf{\texttt{/help}}: Úsalo si te sientes perdido; el asistente te mostrará una lista de todo lo que puede hacer.
 \end{itemize}
 
-\section{Ejemplo Práctico: Trabajando con Excel}
-\subsection{¿Puede la IA ayudarme con mis hojas de cálculo?}
-¡Por supuesto! Antigravity no solo escribe texto; también puede crear programas (en lenguajes como Python) para manipular archivos de Excel (\texttt{.xlsx} o \texttt{.csv}) automáticamente por ti.
+\section{Ejemplo Práctico: Extracción y Manejo de Datos (PDF a Excel)}
+\subsection{Tu asistente como administrador de datos}
+¡La inteligencia artificial no solo sirve para escribir texto! Tu asistente es capaz de leer documentos pesados y extraer la información que necesitas directamente a una hoja de cálculo (como Excel) para que tú no tengas que copiar y pegar manualmente. Él se encarga de todo el trabajo pesado.
 
-\subsection{Qué cosas le puedes pedir}
-Aquí tienes algunas tareas comunes que el asistente puede hacer con tus datos:
+\subsection{Qué tipo de "magia" puede hacer}
+Aquí tienes algunas tareas administrativas increíbles que le puedes pedir:
 \begin{itemize}
-    \item \textbf{Limpieza de datos:} "Lee el archivo \texttt{ventas.xlsx} y elimina todas las filas que tengan celdas vacías."
-    \item \textbf{Análisis rápido:} "Calcula el promedio de ventas por cada mes y dime cuál fue el mes con mayores ganancias."
-    \item \textbf{Crear gráficos:} "Usa los datos de la columna B para generar una gráfica de barras y guárdala como imagen."
-    \item \textbf{Combinar archivos:} "Toma estos tres archivos de Excel y únelos en uno solo."
+    \item \textbf{De PDF a Excel:} Extraer tablas de un reporte en PDF y pasarlas a un archivo \texttt{.xlsx} ordenado.
+    \item \textbf{Limpieza de datos:} "Lee mi archivo de Excel y elimina todas las filas que estén repetidas o vacías."
+    \item \textbf{Clasificación automática:} "Lee esta lista de 100 gastos y clasifícalos por categoría en una nueva columna."
+    \item \textbf{Resúmenes financieros:} "Analiza este documento de ventas y entrégame un Excel solo con los totales de cada mes."
 \end{itemize}
 
-\subsection{Cómo estructurar el prompt para Excel}
-Para que el asistente trabaje correctamente con tus archivos, recuerda la regla de \textit{Claridad + Contexto}:
+\subsection{Cómo crear el prompt perfecto para extraer datos}
+Para que el asistente haga este trabajo a la perfección, tu instrucción debe ser muy clara sobre el origen y el destino de los datos:
 \begin{itemize}
-    \item \textbf{Menciona el archivo exacto:} Dale la ruta (ej. \texttt{C:/MisDocumentos/gastos.xlsx}) si es necesario.
-    \item \textbf{Sé específico con las columnas:} Usa los nombres de las columnas o las letras (ej. "suma los valores de la columna 'Precio'").
+    \item \textbf{Menciona el archivo original:} (ej. "Lee el archivo \texttt{reporte\_anual.pdf}").
+    \item \textbf{Explica qué información específica buscas:} (ej. "Busca solamente la tabla de clientes nuevos").
+    \item \textbf{Dile cómo quieres el resultado final:} (ej. "Guárdalo en un archivo de Excel llamado \texttt{resultados.xlsx}").
 \end{itemize}
 
-\textbf{Ejemplo de Prompt Excelente para Excel:}\\
-\textit{"Actúa como un analista de datos. Lee el archivo 'C:/usuarios/aldo/ventas.xlsx'. Este archivo tiene una columna llamada 'Categoría' y otra llamada 'Ingresos'. Escribe y ejecuta un código que sume los ingresos totales de la categoría 'Electrónica' y crea un nuevo archivo llamado 'resumen.xlsx' con el resultado."}
+\textbf{Ejemplo de Prompt Excelente (De PDF a Excel):}\\
+\textit{"Actúa como un asistente administrativo experto. Lee el archivo 'C:/Documentos/facturas.pdf'. Busca todas las tablas que contienen las compras del mes de marzo. Extrae únicamente las columnas de 'Fecha', 'Producto' y 'Total', y guarda toda esa información organizada en un nuevo archivo de Excel llamado 'compras\_marzo.xlsx'."}
 
 \section{Resolución de Problemas (FAQ)}
 \subsection{¿Qué hago si el asistente no hace lo que quiero?}
