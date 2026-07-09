@@ -8,7 +8,7 @@
 \geometry{a4paper, margin=1in}
 
 \title{Antigravity CLI (AGY) for Dummies\\
-\large Guía definitiva para usar la terminal y tu asistente virtual}
+\large La guía amigable para usar a tu nuevo asistente virtual}
 \author{Aldo Zetina}
 \date{\today}
 
@@ -17,109 +17,70 @@
 \maketitle
 
 \begin{abstract}
-Este manual está diseñado para personas que nunca han utilizado una terminal o línea de comandos. Aquí aprenderás desde cómo abrir esa temida "pantalla negra" hasta cómo darle instrucciones claras (prompts) a tu asistente inteligente, Antigravity CLI (\texttt{agy}), para que realice tareas complejas por ti.
+¿Solo usas Excel, Word y Redes Sociales? ¡Perfecto! Este manual está hecho a tu medida. Aquí aprenderás a usar a tu nuevo asistente virtual (una Inteligencia Artificial) sin usar palabras complicadas. Imagina que es como chatear por WhatsApp con un becario súper rápido y muy inteligente que está listo para hacer tu trabajo aburrido.
 \end{abstract}
 
 \tableofcontents
 \newpage
 
-\section{Introducción al Mundo de la Terminal}
-\subsection{¿Qué es la terminal y por qué no hay que temerle?}
-La terminal (a veces llamada consola, línea de comandos o "esa pantalla negra con letras blancas") es simplemente una forma directa de hablar con tu computadora. En lugar de usar el ratón para hacer clic en íconos o botones, aquí escribimos comandos (texto) para pedirle a la computadora que haga cosas.
+\section{Conociendo a tu Asistente}
+\subsection{¿Qué es una Inteligencia Artificial (IA)?}
+No te compliques: piénsalo como un asistente personal muy aplicado. No es un robot de película, es solo un programa con el que puedes "chatear" para pedirle que te ayude con tareas de tu día a día, como organizar información, resumir documentos o redactar correos.
 
-\subsection{Cómo abrir la terminal en Windows}
-Para empezar a usar tu asistente, primero necesitas abrir la terminal. Sigue estos pasos:
+\subsection{¿Qué es esa "pantalla negra" (la terminal)?}
+Para hablar con este asistente usamos algo llamado "terminal". Olvídate de los botones y el ratón; la terminal es simplemente una ventana de chat donde tú escribes un mensaje, presionas Enter, y el asistente te responde. ¡Así de fácil!
+
+\subsection{Cómo abrir la terminal en Windows y saludar}
 \begin{enumerate}
-    \item Presiona la tecla \textbf{Windows} en tu teclado (la que tiene el logo de Windows).
-    \item Escribe la palabra \texttt{PowerShell} o \texttt{cmd}.
-    \item Presiona \textbf{Enter}.
+    \item Presiona la tecla \textbf{Windows} en tu teclado (la que tiene el logo de la ventanita).
+    \item Escribe la palabra \texttt{cmd} y presiona \textbf{Enter}.
+    \item Se abrirá una ventana negra. Ahí, simplemente escribe la palabra \texttt{agy} (que es el nombre de tu asistente) y presiona \textbf{Enter}.
 \end{enumerate}
-Verás que se abre una ventana con un fondo de color sólido y un texto que parpadea. ¡Felicidades! Estás en la terminal.
-
-\section{Conociendo a tu Asistente: Antigravity (\texttt{agy})}
-\subsection{¿Qué es \texttt{agy}?}
-\texttt{agy} (Antigravity) es tu asistente personal inteligente que vive dentro de la terminal. Puede escribir código por ti, leer documentos, buscar en internet, crear archivos y mucho más.
-
-\subsection{Cómo despertar al asistente}
-Una vez que tengas la terminal abierta, simplemente escribe lo siguiente y presiona Enter:
-\begin{verbatim}
-agy
-\end{verbatim}
-La pantalla cambiará y verás un mensaje de bienvenida. A partir de este momento, ya no estás hablando con tu computadora de forma tradicional, ¡estás hablando con un asistente de inteligencia artificial avanzado!
-
-\subsection{Cómo cerrar el asistente}
-Cuando termines de trabajar y quieras despedirte de tu asistente, simplemente escribe \texttt{/exit} y presiona Enter, o presiona las teclas \texttt{Ctrl+D} dos veces. Esto te regresará a tu terminal normal.
+¡Listo! La pantalla cambiará y verás que tu asistente te saluda. Ya están listos para trabajar. Cuando termines, solo escribe \texttt{/exit} y presiona Enter para despedirte.
 
 \section{El Arte de Pedir (Prompts)}
 \subsection{¿Qué es un "prompt"?}
-Un \textit{prompt} es simplemente la instrucción, petición o pregunta que le escribes a tu asistente en la terminal. Es tu forma de comunicarle exactamente qué quieres que haga.
+Es solo una palabra de moda para referirse a la \textbf{instrucción o petición} que le escribes a tu asistente. Es literalmente el mensaje que le envías en el chat.
 
-\subsection{La anatomía de un \textit{Prompt} Perfecto}
-Para que el asistente te dé resultados increíbles, no puedes darle instrucciones vagas. Un buen prompt suele tener tres ingredientes principales:
+\subsection{La receta para pedir cosas bien}
+Tu asistente es muy inteligente, pero no lee la mente. Si le das instrucciones vagas, el resultado no te gustará. Un buen mensaje (prompt) siempre tiene tres partes:
 \begin{enumerate}
-    \item \textbf{El Rol:} Dile al asistente cómo quieres que se comporte (ej. "Actúa como un profesor paciente", "Como experto en diseño gráfico...").
-    \item \textbf{La Tarea:} Qué es exactamente lo que quieres que haga (ej. "Escribe un resumen", "Crea un código", "Busca un error").
-    \item \textbf{El Contexto y Detalles:} Para quién es, qué tono usar, qué colores incluir, qué no hacer, etc.
+    \item \textbf{El Rol:} Dile cómo quieres que actúe (ej. "Actúa como un redactor experto" o "Como un contador").
+    \item \textbf{La Tarea:} Qué quieres que haga (ej. "Redacta un correo", "Resume este archivo").
+    \item \textbf{Los Detalles:} Para quién es, qué tono usar (formal o amigable), qué no debe incluir.
 \end{enumerate}
 
-\subsection{Ejemplos prácticos: De malo a excelente}
-Veamos cómo mejora una misma instrucción cuando le damos más información:
-
+\subsection{Ejemplos: De malo a excelente}
+Veamos cómo mejora una instrucción para redactar un correo:
 \begin{itemize}
-    \item \textbf{Mal prompt (Muy vago):}\\
-    \textit{"Hazme una página web."}\\
-    (El asistente no sabe de qué trata, ni qué colores usar, ni el objetivo).
-    
-    \item \textbf{Buen prompt (Claro pero sin detalles):}\\
-    \textit{"Crea una página web para una veterinaria. Usa colores cálidos como naranja y amarillo."}\\
-    (Mejor, pero el asistente todavía tendrá que inventar muchos detalles sobre la estructura).
-    
-    \item \textbf{Prompt Excelente (Claro + Contexto + Rol):}\\
-    \textit{"Actúa como un diseñador web experto. Crea la página de inicio para una veterinaria llamada 'Patitas'. El diseño debe ser moderno, usar colores naranja y amarillo, e incluir una sección de servicios (vacunas, baño, consultas). Escribe el código listo para usarse."}
-\end{itemize}
-
-\subsection{Consejo Pro: Divide y vencerás}
-Si tu tarea es gigantesca (como "Crea un videojuego completo"), ¡no se la pidas toda en un solo prompt! Es mejor pedirle que haga una parte, revisarla, y luego pedirle que continúe con la siguiente.
-
-\section{Asignando Tareas (Manos a la obra)}
-\subsection{Comandos especiales (Slash Commands)}
-El asistente tiene "atajos" especiales llamados \textit{Slash commands} que le ayudan a entender cómo quieres que trabaje. Siempre empiezan con una barra diagonal (\texttt{/}).
-
-\begin{itemize}
-    \item \textbf{\texttt{/plan}}: Úsalo cuando tengas una tarea muy grande y quieres que el asistente primero te presente un plan paso a paso antes de empezar a escribir código o hacer cambios.
-    \item \textbf{\texttt{/goal}}: Úsalo para tareas largas. Le dice al asistente que se concentre al 100\% en lograr el objetivo sin detenerse a preguntarte cosas a cada rato.
-    \item \textbf{\texttt{/help}}: Úsalo si te sientes perdido; el asistente te mostrará una lista de todo lo que puede hacer.
+    \item \textbf{Mensaje malo:} "Escribe un correo pidiendo vacaciones." (El asistente no sabe a quién va dirigido ni las fechas).
+    \item \textbf{Mensaje regular:} "Escribe un correo para mi jefe Carlos pidiendo vacaciones para la próxima semana." (Mejor, pero le falta tono).
+    \item \textbf{Mensaje Excelente:} "Actúa como un empleado muy respetuoso. Escribe un correo corto y formal para mi jefe Carlos, solicitando mis vacaciones del 10 al 15 de agosto. Menciona que dejaré todos mis pendientes terminados."
 \end{itemize}
 
 \section{Ejemplo Práctico: Extracción y Manejo de Datos (PDF a Excel)}
 \subsection{Tu asistente como administrador de datos}
-¡La inteligencia artificial no solo sirve para escribir texto! Tu asistente es capaz de leer documentos pesados y extraer la información que necesitas directamente a una hoja de cálculo (como Excel) para que tú no tengas que copiar y pegar manualmente. Él se encarga de todo el trabajo pesado.
+Aquí viene lo mejor. Tu asistente no solo redacta correos; ¡puede hacer el trabajo pesado de administración por ti! Es capaz de leer documentos grandísimos (como un PDF de 100 páginas) y extraer solo la información que te interesa, poniéndola directamente en un archivo de Excel, sin que tú tengas que copiar y pegar celda por celda.
 
 \subsection{Qué tipo de "magia" puede hacer}
-Aquí tienes algunas tareas administrativas increíbles que le puedes pedir:
 \begin{itemize}
-    \item \textbf{De PDF a Excel:} Extraer tablas de un reporte en PDF y pasarlas a un archivo \texttt{.xlsx} ordenado.
-    \item \textbf{Limpieza de datos:} "Lee mi archivo de Excel y elimina todas las filas que estén repetidas o vacías."
-    \item \textbf{Clasificación automática:} "Lee esta lista de 100 gastos y clasifícalos por categoría en una nueva columna."
-    \item \textbf{Resúmenes financieros:} "Analiza este documento de ventas y entrégame un Excel solo con los totales de cada mes."
+    \item \textbf{De PDF a Excel:} "Saca todas las tablas de este reporte en PDF y pásalas a un Excel."
+    \item \textbf{Limpieza de datos:} "Lee mi lista de Excel y borra todas las filas repetidas."
+    \item \textbf{Clasificación automática:} "Toma esta lista de 100 productos y agrúpales una categoría."
 \end{itemize}
 
-\subsection{Cómo crear el prompt perfecto para extraer datos}
-Para que el asistente haga este trabajo a la perfección, tu instrucción debe ser muy clara sobre el origen y el destino de los datos:
+\subsection{Cómo pedirle que trabaje con Excel}
+\textbf{Ejemplo de Prompt Excelente para Excel:}\\
+\textit{"Actúa como mi auxiliar administrativo. Lee el archivo 'facturas.pdf' que tengo guardado. Busca todas las compras del mes de marzo. Saca solamente las columnas de 'Fecha', 'Producto' y 'Total', y guarda todo ordenado en un nuevo archivo de Excel llamado 'compras\_marzo.xlsx'."}
+
+\section{Los "Atajos" de tu Asistente}
+El asistente tiene unos comandos rápidos (siempre empiezan con una barra diagonal \texttt{/}) para facilitarte la vida:
 \begin{itemize}
-    \item \textbf{Menciona el archivo original:} (ej. "Lee el archivo \texttt{reporte\_anual.pdf}").
-    \item \textbf{Explica qué información específica buscas:} (ej. "Busca solamente la tabla de clientes nuevos").
-    \item \textbf{Dile cómo quieres el resultado final:} (ej. "Guárdalo en un archivo de Excel llamado \texttt{resultados.xlsx}").
+    \item \textbf{\texttt{/plan}}: Úsalo cuando la tarea es muy grande. Le dice al asistente: "Antes de hacer nada, dime paso a paso cómo lo vas a hacer para que yo te lo apruebe".
+    \item \textbf{\texttt{/goal}}: Le dice al asistente que se concentre totalmente en la tarea hasta terminarla, ideal para cuando le pides algo que va a tardar mucho.
 \end{itemize}
 
-\textbf{Ejemplo de Prompt Excelente (De PDF a Excel):}\\
-\textit{"Actúa como un asistente administrativo experto. Lee el archivo 'C:/Documentos/facturas.pdf'. Busca todas las tablas que contienen las compras del mes de marzo. Extrae únicamente las columnas de 'Fecha', 'Producto' y 'Total', y guarda toda esa información organizada en un nuevo archivo de Excel llamado 'compras\_marzo.xlsx'."}
-
-\section{Resolución de Problemas (FAQ)}
-\subsection{¿Qué hago si el asistente no hace lo que quiero?}
-No te desesperes. Simplemente explícale qué hizo mal, como si se lo explicaras a un compañero de trabajo. Por ejemplo: "El color que usaste está muy oscuro, cámbialo a un azul más claro".
-
-\subsection{¿Por qué veo mucho texto pasar rápido en la pantalla?}
-A veces, cuando el asistente está trabajando (por ejemplo, leyendo un archivo grande o instalando un programa), verás mucho texto en la pantalla. ¡Es normal! Déjalo terminar.
+\section{¿Y si se equivoca?}
+No te preocupes ni te pelees con la computadora. Si el asistente te entrega algo que no te gusta, simplemente respóndele en el chat explicándole qué hizo mal. Por ejemplo: \textit{"Ese correo suena muy formal, hazlo más amigable"} o \textit{"Te faltó incluir la columna de precios en el Excel, agrégala por favor"}. Trátalo como a una persona y te entenderá perfecto.
 
 \end{document}
