@@ -1,0 +1,520 @@
+% NOTA IMPORTANTE PARA COMPILAR:
+% Para que los emojis se vean correctamente al generar el PDF,
+% debes compilar este archivo usando XeLaTeX o LuaLaTeX.
+% Si usas Overleaf, ve a Menu -> Compiler y selecciona "XeLaTeX".
+
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\setmainfont{Segoe UI Emoji}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\geometry{a4paper, margin=1in}
+
+\definecolor{termbg}{RGB}{30,30,30}
+\definecolor{termbar}{RGB}{50,50,50}
+\definecolor{termcyan}{RGB}{86,182,194}
+\definecolor{termgreen}{RGB}{80,250,123}
+\definecolor{termyellow}{RGB}{241,196,15}
+\definecolor{termgray}{RGB}{160,160,160}
+\definecolor{termwhite}{RGB}{235,235,235}
+\definecolor{dotred}{RGB}{237,106,94}
+\definecolor{dotyellow}{RGB}{245,191,79}
+\definecolor{dotgreen}{RGB}{97,197,80}
+
+\title{✨ Antigravity para Principiantes ✨\\
+\large ¡La guía completa para dominar a tu asistente mágico! 🧞‍♂️}
+\author{Aldo Zetina}
+\date{\today}
+
+\begin{document}
+\shorthandoff{"}
+
+\maketitle
+
+\begin{abstract}
+🚀 ¡Hola! Si sabes mandar un mensaje por WhatsApp o subir una foto a redes sociales, ¡ya tienes todo lo necesario para usar esta guía!
+
+Vamos a enseñarte a usar \textbf{Antigravity}, un asistente virtual de Google súper inteligente (una Inteligencia Artificial). Imagina que es como tener a un pequeño genio de la lámpara en tu computadora, listo para hacer tu tarea o tu trabajo aburrido en segundos. 🪄
+
+Esta no es solo la guía rápida: aquí te vamos a explicar \textbf{cómo funciona por dentro}, cuánto cuesta, cómo controlar lo que hace, y a resolver tus dudas más comunes. No necesitas saber programar ni nada complicado: si sabes escribir un mensaje, ya sabes usarlo. ¡Empecemos! 🎉
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{👋 Conociendo a tu Asistente Mágico}
+
+\subsection{🤖 ¿Qué es una Inteligencia Artificial (IA)?}
+No te asustes con el nombre. No es un robot malo de las películas. Piénsalo como un \textbf{amigo súper rápido} con el que chateas. Tú le pides favores (como escribir un correo, resumir un cuento o arreglar una tabla de Excel) y él lo hace rapidísimo. ⚡
+
+Lo curioso es que esta IA no solo \textit{platica} contigo: también puede \textbf{hacer cosas de verdad} en tu computadora, como abrir archivos, buscar información en internet o crear documentos nuevos. Por eso decimos que es un "asistente" o un "agente", no solo un chat.
+
+\subsection{🧞 ¿Qué es Antigravity?}
+Antigravity es el nombre del asistente mágico que vamos a usar en esta guía. Lo hizo Google, y es como un empleado invisible que vive en tu computadora, listo para ayudarte con tareas de oficina, del hogar o de la escuela. 🏠🏢🎓
+
+Puedes usarlo de varias formas (Google le llama "superficies", pero para ti son solo "puertas de entrada" distintas al mismo asistente):
+\begin{itemize}
+    \item 🖥️ Una \textbf{aplicación de escritorio}, con ventanas y botones, donde incluso puedes ver a varios ayudantes trabajando a la vez (le llaman el "Agent Manager", lo veremos más adelante).
+    \item ⌨️ Una \textbf{terminal} (una ventana de puro texto), que es en la que nos vamos a enfocar en esta guía por ser la más rápida.
+    \item 🧩 Un modo para programadores (el "SDK"), que no necesitas tocar si no programas.
+\end{itemize}
+Lo bueno es que sin importar por dónde entres, es \textbf{el mismo asistente}, con la misma memoria de reglas y permisos. 😌
+
+\subsection{💻 ¿Qué es esa "pantalla negra"?}
+Para hablar con tu nuevo asistente, usamos algo llamado "terminal". Olvídate de hacer clic con el ratón. 🖱️ La terminal es simplemente \textbf{una ventana de chat}. Tú escribes tu mensaje ahí, aprietas la tecla \textbf{Enter}, y el asistente te responde. 💬
+
+No hay nada que puedas "romper" por escribir algo raro: si te equivocas, simplemente le explicas y ya. 🙂
+
+\subsection{🧭 El mapa completo: 5 pasos}
+Para que no te pierdas, así es el camino completo que vamos a recorrer en esta sección. \textbf{Todo se hace con comandos en la terminal}, sin navegar por páginas web ni hacer clic en instaladores:
+\begin{enumerate}
+    \item Instalar Node.js (un programa base que Antigravity necesita) con un comando.
+    \item Decirle a Windows dónde quedó Node.js (esto se llama "darle PATH") con un comando.
+    \item Instalar Antigravity CLI con un comando.
+    \item Decirle a Windows dónde quedó Antigravity CLI (otra vez "darle PATH") con un comando.
+    \item Iniciar sesión con tu cuenta de Google (te va a pedir pegar un código).
+\end{enumerate}
+¡Vamos uno por uno, sin prisa! 🐢
+
+\subsection{🧱 Paso 1: instalando Node.js}
+\textbf{Node.js} es un programa base que Antigravity usa por dentro para funcionar. Si no lo tienes, la instalación va a fallar con un error confuso, así que lo instalamos primero, directo desde la terminal usando \texttt{winget} (un instalador de programas que ya viene incluido en Windows):
+
+\begin{enumerate}
+    \item Toca la tecla \textbf{Windows} 🪟 y escribe \texttt{powershell}. Dale clic a \textbf{"Windows PowerShell"} para abrirla. 🖥️
+    \item Copia este comando completo (una sola línea):
+\begin{verbatim}
+winget install OpenJS.NodeJS.LTS `
+  --accept-package-agreements `
+  --accept-source-agreements
+\end{verbatim}
+    \item Pégalo (clic derecho) y presiona \textbf{Enter}.
+    \item Si te aparece una ventanita preguntando si confías en el instalador ("¿Desea permitir que esta aplicación...?"), dale que \textbf{Sí}. 🔓
+    \item Vas a ver una barra de progreso descargando e instalando. Espera a que termine (uno o dos minutos). ⏳
+\end{enumerate}
+
+\textbf{Nota:} si al escribir \texttt{winget} te sale un error como \texttt{"winget" no se reconoce como un comando}, significa que tu Windows es una versión antigua que no lo trae incluido. En ese caso, cierra la terminal, ve a la \textbf{Microsoft Store} (búscala con la tecla Windows), busca "App Installer" e instálala; eso agrega el comando \texttt{winget}. Luego regresa e intenta este paso de nuevo. 🏪
+
+\subsection{🗺️ Paso 2: dándole PATH a Node.js}
+"PATH" es simplemente la lista de carpetas donde Windows busca programas cuando escribes un comando. A veces el instalador no se agrega solo a esa lista. La forma más fácil de arreglarlo es con un solo comando, sin andar abriendo ventanas de configuración:
+
+\begin{enumerate}
+    \item En tu ventana de PowerShell, copia este comando completo (una sola línea):
+\begin{verbatim}
+[Environment]::SetEnvironmentVariable('Path',
+[Environment]::GetEnvironmentVariable('Path','User') +
+';C:\Program Files\nodejs\', 'User')
+\end{verbatim}
+    \item Pégalo (clic derecho) y presiona \textbf{Enter}. No debería mostrarte ningún mensaje: eso es buena señal, significa que funcionó. ✅
+    \item \textbf{Cierra por completo} esa ventana de PowerShell.
+\end{enumerate}
+
+Abre una ventana \textbf{nueva} de PowerShell (tecla Windows 🪟 → escribe \texttt{powershell} → Enter) y escribe \texttt{node --version} para comprobar; si te regresa un número como \texttt{v22.11.0}, ya quedó listo. 🎉
+
+\subsection{📥 Paso 3: instalando el Antigravity CLI}
+Ahora sí, vamos a instalar la versión de terminal de tu asistente, que se llama \textbf{Antigravity CLI}, y cuyo comando corto es \texttt{agy} (así de fácil, cuatro letras).
+
+\begin{enumerate}
+    \item Si no tienes una ventana de PowerShell abierta, ábrela: tecla \textbf{Windows} 🪟, escribe \texttt{powershell}, y dale clic a \textbf{"Windows PowerShell"}.
+    \item Ahora vamos a copiar un comando. Selecciona con el mouse todo este texto (una sola línea):
+\begin{verbatim}
+irm https://antigravity.google/cli/install.ps1 | iex
+\end{verbatim}
+    \item Presiona \textbf{Ctrl + C} en tu teclado para copiarlo.
+    \item Regresa a la ventana azul de PowerShell, haz \textbf{clic derecho} dentro de ella (en PowerShell, el clic derecho pega el texto automáticamente) y luego presiona \textbf{Enter}.
+    \item Vas a ver textos pasando rápido en la pantalla: es normal, es la instalación descargándose e instalándose sola. Espera a que termine (puede tardar uno o dos minutos, no cierres la ventana). ⏳
+\end{enumerate}
+
+\subsection{🗺️ Paso 4: dándole PATH a Antigravity CLI}
+Igual que con Node.js, ahora vamos a asegurarnos de que Windows sepa dónde quedó guardado el programa \texttt{agy}, con otro comando rápido:
+
+\begin{enumerate}
+    \item En tu ventana de PowerShell, copia este comando completo (una sola línea):
+\begin{verbatim}
+[Environment]::SetEnvironmentVariable('Path',
+[Environment]::GetEnvironmentVariable('Path','User') +
+';' + $env:LOCALAPPDATA + '\Antigravity\', 'User')
+\end{verbatim}
+    \item Pégalo (clic derecho) y presiona \textbf{Enter}. Igual que antes, si no sale ningún mensaje, es buena señal. ✅
+    \item \textbf{Cierra por completo} esa ventana de PowerShell.
+\end{enumerate}
+Abre una \textbf{ventana nueva} de PowerShell (tecla Windows 🪟 → \texttt{powershell} → Enter). Esto es importante para que Windows "se entere" de los dos programas nuevos que se acaban de instalar.
+
+\subsection{🚧 ¿Te salió un mensaje de error? (es normal, no te preocupes)}
+Windows a veces bloquea comandos que descargan cosas de internet, \textbf{aunque sean seguros}, solo por precaución. Si al pegar el comando del paso anterior te sale un texto en rojo o algo que dice "error", respira tranquilo: casi siempre es uno de estos dos casos. 🧯
+
+\subsubsection{❌ Caso 1: "la ejecución de scripts está deshabilitada en este sistema"}
+Si ves un mensaje parecido a este (puede variar un poco):
+\begin{verbatim}
+no se puede cargar el archivo ... porque la ejecucion de
+scripts esta deshabilitada en este sistema
+\end{verbatim}
+Es porque Windows, por default, no deja correr este tipo de instaladores hasta que tú se lo permitas. Para arreglarlo:
+\begin{enumerate}
+    \item En esa misma ventana de PowerShell, copia y pega esta línea y presiona Enter:
+\begin{verbatim}
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+\end{verbatim}
+    \item Te va a preguntar si estás seguro (\texttt{[S] Si  [N] No}). Escribe \texttt{S} y presiona Enter.
+    \item Ahora sí, vuelve a pegar el comando de instalación original de arriba (el que empieza con \texttt{irm}) y presiona Enter otra vez.
+\end{enumerate}
+
+\subsubsection{❌ Caso 2: no pasa nada, o la ventana se cierra sola}
+Si la ventana se cierra de la nada o parece que no hizo nada, prueba abrir PowerShell \textbf{como administrador}: en vez de clic izquierdo sobre "Windows PowerShell", dale \textbf{clic derecho} y elige \textit{"Ejecutar como administrador"}. Windows te va a preguntar si le das permiso (aparecerá una ventana gris); dile que sí. Luego repite el comando de instalación. 🔓
+
+\subsubsection{❌ Caso 3: "'node' no se reconoce como un comando"}
+Si ves un mensaje parecido a este:
+\begin{verbatim}
+'node' no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable
+\end{verbatim}
+Significa que te faltó el \textbf{Paso 1} (instalar Node.js) o el \textbf{Paso 2} (darle PATH a Node.js) que vimos al inicio de esta sección. 🧱 Sube unos párrafos, revisa esos dos pasos con calma, y después vuelve a intentar. Este es, de lejos, el error más común para alguien que instala esto por primera vez, así que no te preocupes si te pasa. 😊
+
+Si después de estos dos intentos sigue sin funcionar, no pasa nada: cierra todas las ventanas, reinicia tu computadora, y vuelve a intentar desde el paso 1 de esta sección. Nueve de cada diez veces esto arregla cualquier error raro. 🔄
+
+\subsection{✅ Comprobando que sí quedó instalado}
+En tu ventana nueva de PowerShell, escribe esto exactamente y presiona Enter:
+\begin{verbatim}
+agy --version
+\end{verbatim}
+Si todo salió bien, verás algo parecido a esto (el número de versión puede variar):
+\begin{verbatim}
+agy version 1.4.2
+\end{verbatim}
+Si en cambio te sale un error como \texttt{"agy" no se reconoce como un comando}, revisa que hayas completado bien el \textbf{Paso 4} (darle PATH a Antigravity CLI) y que hayas abierto una ventana \textbf{nueva} de PowerShell después de hacerlo. Si sigue sin funcionar, reinicia tu computadora una vez y vuelve a intentar. 🔄
+
+\subsection{🔑 Paso 5: iniciando sesión por primera vez}
+Ahora sí, vamos a saludar a tu asistente. En la misma ventana, escribe:
+\begin{verbatim}
+agy
+\end{verbatim}
+y presiona Enter. La primera vez, va a pasar esto:
+\begin{enumerate}
+    \item Se abrirá tu navegador automáticamente. Ahí eliges tu cuenta de Google (la misma de tu Gmail) y le das \textbf{"Permitir"}. ✅
+    \item La página va a mostrarte un \textbf{código} (una combinación de letras y/o números). \textbf{Selecciónalo con el mouse y cópialo} (Ctrl + C). 📋
+    \item Regresa a la ventana de PowerShell, haz \textbf{clic derecho} para pegar el código donde te lo esté pidiendo, y presiona \textbf{Enter}.
+\end{enumerate}
+Con eso queda confirmado que eres tú, y ya no vas a tener que repetir este paso la próxima vez que abras \texttt{agy}. 🔑
+
+\subsection{🖼️ Así se ve la pantalla de verdad}
+Para que no te sorprendas ni pienses que algo salió mal, así es \textbf{exactamente} como se ve tu asistente cuando lo abres (el dibujito es su "logo"):
+
+\begin{center}
+\begin{tcolorbox}[
+    enhanced,
+    width=0.92\textwidth,
+    colback=termbg,
+    colframe=termbar,
+    boxrule=0pt,
+    arc=5pt,
+    outer arc=5pt,
+    top=10pt, bottom=10pt, left=14pt, right=14pt,
+    drop fuzzy shadow,
+    title={\hspace{2pt}\raisebox{-0.15em}{\textcolor{dotred}{\Large\textbullet}}\,\textcolor{dotyellow}{\Large\textbullet}\,\textcolor{dotgreen}{\Large\textbullet}\hfill \color{white}\ttfamily\footnotesize Windows PowerShell \hfill\phantom{x}},
+    colbacktitle=termbar,
+    coltitle=white,
+    fonttitle=\ttfamily,
+    top=8pt,
+]
+{\ttfamily\small
+\textcolor{termcyan}{$\blacktriangle$}\ \textcolor{termgreen}{Antigravity CLI 1.1.1}\\[4pt]
+\textcolor{termwhite}{tucorreo@gmail.com}\ \textcolor{termgray}{(Google AI Pro)}\\[4pt]
+\textcolor{termyellow}{Gemini 3.1 Pro (High)}\\[4pt]
+\textcolor{termgray}{\textasciitilde}
+
+\vspace{8pt}
+\textcolor{termbar}{\rule{\linewidth}{0.6pt}}\\[6pt]
+\textcolor{termwhite}{\textgreater}\\[6pt]
+\textcolor{termbar}{\rule{\linewidth}{0.6pt}}\\[6pt]
+\textcolor{termgray}{? for shortcuts} \hfill \textcolor{termgreen}{Gemini 3.1 Pro (High)}
+}
+\end{tcolorbox}
+\end{center}
+
+Vamos a desmenuzar cada parte para que sepas qué estás viendo:
+\begin{itemize}
+    \item 🔺 El \textbf{triángulo} de arriba es solo el logo de Antigravity, decorativo.
+    \item 📛 \texttt{Antigravity CLI 1.1.1}: el nombre y la versión que tienes instalada.
+    \item 📧 \texttt{tucorreo@gmail.com}: la cuenta de Google con la que iniciaste sesión, y entre paréntesis tu tipo de plan (por ejemplo "Google AI Pro").
+    \item 🧠 \texttt{Gemini 3.1 Pro (High)}: el "cerebro" o modelo de IA que está usando en este momento para responderte.
+    \item 📂 \texttt{\textasciitilde}: la carpeta en la que está parado (el símbolo \texttt{\textasciitilde} significa "tu carpeta de usuario", el punto de partida).
+    \item ⌨️ El símbolo \texttt{>} solito en su propia línea: ahí es donde escribes tu mensaje. ¡Ese es el que estabas buscando! Escribe y presiona Enter.
+    \item 💡 \texttt{? for shortcuts}: un recordatorio de que puedes escribir \texttt{?} en cualquier momento para ver todos los atajos disponibles.
+\end{itemize}
+
+¡Ya puedes empezar a platicar! 🎉 Cuando quieras cerrar el chat, escribe \texttt{/exit} y presiona Enter para salir. 💤
+
+\subsection{💬 Tu primera conversación: entrada y salida}
+Para que veas cómo se siente de verdad, aquí tienes un ejemplo completo de lo que \textbf{tú escribes} (después del símbolo \texttt{>}) y lo que \textbf{el asistente te responde}:
+
+\begin{verbatim}
+> Hola! Explicame en una frase que puedes hacer por mi.
+
+Agente: Hola! Puedo leer y escribir archivos, buscar informacion,
+organizar datos en Excel, y automatizar tareas repetitivas
+que tu me pidas, todo desde esta terminal.
+\end{verbatim}
+
+Así de simple: tú escribes tu mensaje después del \texttt{>}, presionas Enter, y el asistente te contesta justo abajo. No hay trucos ni comandos raros que memorizar para empezar a platicar. 😊
+
+\subsection{📁 Proyectos y Conversaciones}
+Cuando trabajas con Antigravity, todo ocurre dentro de un \textbf{proyecto}: básicamente, la carpeta (o carpetas) de tu computadora donde el asistente va a trabajar. Piénsalo como decirle "vamos a trabajar aquí, en este escritorio, no en toda la casa" 🗄️. Así el asistente sabe exactamente dónde buscar tus archivos y dónde guardar lo que hace, sin andar tocando cosas que no le pediste.
+
+Dentro de un proyecto puedes tener varias \textbf{conversaciones}: como distintos chats de WhatsApp con la misma persona, pero cada uno sobre un tema diferente. Puedes ponerle nombre a cada una para encontrarla después. 🗂️
+
+\newpage
+\section{🗣️ El Arte de Pedir (Prompts)}
+
+\subsection{🤔 ¿Qué es un "prompt"?}
+¡Es una palabra elegante para decir \textbf{"mensaje"}! Cuando le escribes una instrucción a tu asistente, le estás dando un "prompt". 📝 No necesitas hablarle "en computadora": puedes escribirle exactamente como le hablarías a una persona.
+
+\subsection{🍰 La receta secreta para pedir las cosas bien}
+Tu asistente es muy listo, pero no lee la mente 🧠. Si le pides las cosas a medias, no sabrá qué hacer, o se lo tendrá que inventar. Un mensaje perfecto siempre tiene estos ingredientes:
+
+\begin{enumerate}
+    \item \textbf{🎭 El Personaje:} Dile a quién debe imitar (ej. "Actúa como un maestro divertido" o "Como un experto en videojuegos").
+    \item \textbf{🎯 La Misión:} Qué quieres que haga (ej. "Escribe un cuento", "Hazme una tabla").
+    \item \textbf{🎨 Los Detalles:} Colores, nombres, qué tono usar (¿chistoso o serio?), y cualquier dato que solo tú sabes (fechas, nombres de personas, etc.).
+    \item \textbf{📎 El Contexto:} Si tienes un archivo, foto o documento relacionado, ¡dile dónde está! Así no tiene que adivinar de qué le estás hablando.
+\end{enumerate}
+
+\subsection{🌟 Ejemplos: De aburrido a increíble}
+Mira cómo cambia si le pides que escriba un correo:
+\begin{itemize}
+    \item ❌ \textbf{Mensaje malo:} "Escribe un correo pidiendo vacaciones." (¿A quién? ¿Cuándo?).
+    \item ⚠️ \textbf{Mensaje regular:} "Escribe un correo para mi jefe Carlos pidiendo vacaciones la próxima semana." (Le falta emoción).
+    \item ✅ \textbf{Mensaje Excelente:} "Actúa como un empleado muy amable. Escribe un correo cortito para mi jefe Carlos pidiendo vacaciones del 10 al 15 de agosto. Dile que dejaré mi trabajo terminado. Usa un tono muy respetuoso." 🏆
+\end{itemize}
+
+Así se ve en la práctica, con el "Mensaje Excelente" de arriba, tal cual lo escribirías en la terminal y lo que el asistente te devolvería:
+
+\begin{verbatim}
+> Actua como un empleado muy amable. Escribe un correo cortito
+para mi jefe Carlos pidiendo vacaciones del 10 al 15 de agosto.
+Dile que dejare mi trabajo terminado. Usa un tono muy respetuoso.
+
+Agente: Aqui tienes tu correo:
+
+  Asunto: Solicitud de vacaciones
+
+  Hola Carlos,
+
+  Espero te encuentres muy bien. Te escribo para solicitar
+  vacaciones del 10 al 15 de agosto. Antes de irme dejare
+  todo mi trabajo pendiente terminado y en orden.
+
+  Quedo atento a tu confirmacion. Muchas gracias por tu
+  tiempo.
+
+  Saludos cordiales,
+  [Tu nombre]
+\end{verbatim}
+
+Fíjate que tú solo escribiste una instrucción, y el asistente te regresó el correo completo, listo para copiar y pegar donde lo necesites. 📋
+
+\subsection{🧭 Prompts para cada parte de tu vida}
+Aquí tienes ejemplos listos para copiar y adaptar, organizados por área. ¡Solo cámbiales los datos por los tuyos! ✂️
+
+\subsubsection{🏢 En la oficina}
+\begin{itemize}
+    \item \textit{"Actúa como mi asistente de oficina. Resume este documento de 10 páginas en 5 puntos clave, con un tono profesional."}
+    \item \textit{"Revisa el borrador de este correo y hazlo sonar más formal, sin cambiar lo que dice."}
+    \item \textit{"Toma las notas de esta junta y conviértelas en una lista de tareas pendientes, con quién es responsable de cada una."}
+\end{itemize}
+
+\subsubsection{🏠 En el hogar}
+\begin{itemize}
+    \item \textit{"Actúa como un chef amigable. Dame una receta fácil para cenar con lo que tengo: pollo, arroz y brócoli."}
+    \item \textit{"Hazme una lista del súper para la semana, organizada por pasillo del supermercado."}
+    \item \textit{"Ayúdame a planear el cumpleaños de mi hija de 7 años: dame ideas de tema, decoración y juegos."}
+\end{itemize}
+
+\subsubsection{🎓 En los estudios}
+\begin{itemize}
+    \item \textit{"Actúa como un profesor paciente. Explícame qué es la fotosíntesis como si tuviera 12 años."}
+    \item \textit{"Resume este artículo largo en un párrafo, sin quitarle las ideas importantes."}
+    \item \textit{"Hazme 5 preguntas de repaso sobre la Revolución Mexicana para estudiar para mi examen."}
+\end{itemize}
+
+\newpage
+\section{⚙️ Cómo trabaja tu asistente por dentro}
+Esta sección es opcional, pero te va a ayudar a entender \textbf{por qué} tu asistente a veces hace cosas que parecen "mágicas" o un poco misteriosas. No necesitas memorizar nada de esto para usarlo, ¡pero te va a dar más confianza! 💪
+
+\subsection{🧰 Las herramientas: lo que tu asistente puede hacer de verdad}
+Cuando le pides algo, tu asistente no solo "piensa" una respuesta: usa \textbf{herramientas} reales para cumplir tu petición, como si tuviera manos. Estas son las principales:
+
+\begin{itemize}
+    \item 📖 \textbf{Leer archivos:} Abre y lee documentos, PDFs, fotos o Excels que le indiques.
+    \item ✍️ \textbf{Escribir y editar archivos:} Crea documentos nuevos o modifica los que ya tienes.
+    \item ⌨️ \textbf{Ejecutar comandos en la terminal:} Puede correr pequeñas tareas por su cuenta, como organizar archivos en carpetas.
+    \item 🌐 \textbf{Buscar en internet:} Puede navegar la web para buscarte información actualizada.
+\end{itemize}
+
+Como estas herramientas pueden \textit{cambiar cosas de verdad} en tu computadora, recuerda el sistema de permisos que vimos (Allow / Ask / Deny). Así se ve cuando el asistente te pide tu autorización antes de escribir un archivo:
+
+\begin{verbatim}
+> Guarda un resumen de esta conversacion en resumen.txt
+
+Agente: Quiero crear el archivo "resumen.txt" con el
+resumen. Es un archivo nuevo, no reemplaza nada existente.
+
+  Permitir esta accion? [s/n]
+
+> s
+
+Agente: Listo, guarde el resumen en resumen.txt.
+\end{verbatim}
+
+Tú escribes \texttt{s} (de "sí") o \texttt{n} (de "no") y presionas Enter. Así te aseguras de que nada se cree, cambie o borre sin que tú lo sepas. 🛡️
+
+\subsection{🕹️ El Agent Manager: la mesa de control}
+Imagina una mesa de control con varias pantallitas, cada una mostrando a un ayudante distinto trabajando en algo. Eso es el \textbf{Agent Manager}: un lugar donde puedes ver (y organizar) a varios asistentes trabajando al mismo tiempo en distintas tareas, en vez de tener que esperar a que uno termine para pedirle otra cosa al siguiente. 🎛️
+
+\subsection{🏃 Subagentes: los mandaderos}
+A veces, para hacer una tarea grande, tu asistente principal manda a "mandaderos" más pequeños a hacer partes específicas del trabajo, así como un jefe de cocina manda a sus ayudantes a picar verduras mientras él se encarga de otra cosa. 🔪 A estos les llamamos \textbf{subagentes}.
+
+Lo mejor es que cada mandadero trabaja en su propio "rincón" (los técnicos le llaman "worktree"), así que no se estorban entre ellos ni se pisan el trabajo. Al final, el asistente principal junta todo lo que hicieron y te lo entrega. 🧺
+
+\subsection{📖 Skills: los manuales de instrucciones}
+Un \textbf{Skill} (habilidad) es como un manual de instrucciones que tu asistente puede leer para saber hacer una tarea muy específica y especializada, tal como un electricista consulta un manual antes de instalar un aparato nuevo. 🔌 Estos manuales se pueden compartir y reutilizar, incluso entre distintos asistentes de IA, porque siguen un formato común.
+
+\subsection{🪝 Hooks: las reglas de la casa}
+Un \textbf{Hook} es como una regla de la casa que se activa sola en ciertos momentos. Por ejemplo: "cada vez que alguien entre por la puerta principal, que se prenda la luz automáticamente". 💡 En el caso de tu asistente, un hook puede decir cosas como "cada vez que termines una tarea, avísame" o "antes de borrar cualquier archivo, pídeme permiso primero". Son reglas que tú (o alguien más técnico) pueden configurar para que el asistente se comporte de cierta forma siempre.
+
+\subsection{🧩 Extensions / Plugins: los aditamentos}
+Los \textbf{plugins} (antes llamados "extensions") son como aditamentos o "apps extra" que le agregan poderes nuevos a tu asistente: por ejemplo, la capacidad de conectarse a un programa específico de tu trabajo. No necesitas instalar ninguno para empezar a usar Antigravity, pero están ahí si algún día necesitas algo más especializado. 🔧
+
+\newpage
+\section{🔐 ¿Quién manda aquí? El sistema de permisos}
+Tu asistente puede hacer muchas cosas, y por eso Antigravity tiene un \textbf{sistema de permisos} para que \textit{tú} sigas teniendo el control, como el dueño de la casa que decide quién puede entrar a cada cuarto. 🏡
+
+Piénsalo como darle las llaves de tu casa a alguien de confianza, pero con reglas claras:
+\begin{itemize}
+    \item ✅ \textbf{Allow (Permitir):} "Esta puerta la puedes usar libremente, no necesitas avisarme." Por ejemplo, tareas repetitivas y seguras, como guardar una copia de un archivo.
+    \item 🤝 \textbf{Ask (Preguntar):} "Antes de entrar a este cuarto, toca la puerta y espera mi permiso." El asistente te pregunta antes de hacer algo delicado, como modificar un archivo importante.
+    \item 🚫 \textbf{Deny (Negar):} "Esta puerta se queda con llave, ni la toques." Ciertas carpetas o acciones quedan completamente bloqueadas, pase lo que pase.
+\end{itemize}
+
+Tú decides qué nivel usar para cada tipo de tarea. Si no sabes por dónde empezar, no hay problema: el asistente casi siempre te va a \textbf{preguntar antes de hacer algo importante}, para que nunca te lleves una sorpresa. 😊
+
+\newpage
+\section{📊 ¡Magia con Excel y Archivos!}
+
+\subsection{🦸‍♂️ Tu asistente al rescate}
+¿Odias copiar y pegar cosas aburridas? 😴 ¡Tu asistente lo hace por ti! Puede leer documentos gigantes y pasarlos a Excel solito, sin que tú muevas un dedo.
+
+\subsection{✨ Trucos que puede hacer por ti}
+\begin{itemize}
+    \item 📄➡️📗 \textbf{De PDF a Excel:} "Lee este PDF larguísimo y pon todas las tablas en un Excel."
+    \item 🧹 \textbf{Limpiar basura:} "Lee mi Excel y borra todos los renglones repetidos."
+    \item 🗂️ \textbf{Ordenar cosas:} "Toma esta lista de 100 dulces y agrúpalos por colores."
+    \item 🧮 \textbf{Sumar y calcular:} "Suma el total de gastos de este mes y dime cuál categoría gasté más."
+    \item 📸 \textbf{De foto a texto:} "Aquí hay una foto de un recibo, pásame los datos a una tabla."
+\end{itemize}
+
+\subsection{📝 Cómo pedirle que trabaje con Excel}
+\textbf{Ejemplo de un Mensaje Excelente:}\\
+\textit{"Actúa como mi ayudante. 🙋‍♂️ Lee el archivo 'facturas.pdf' que tengo guardado. Busca todas las compras de marzo. Saca solo las columnas de 'Fecha', 'Producto' y 'Total', y guarda todo en un nuevo archivo de Excel llamado 'compras\_marzo.xlsx'."} 📂
+
+Fíjate que el mensaje le dice \textbf{qué archivo leer}, \textbf{qué buscar} y \textbf{cómo se debe llamar el resultado}. Entre más claro seas con estos tres datos, mejor te va a salir. 👍
+
+Así se vería en la terminal (fíjate cómo primero te pide permiso, porque va a crear un archivo nuevo):
+\begin{verbatim}
+> Lee el archivo facturas.pdf, busca las compras de marzo,
+saca las columnas Fecha, Producto y Total, y guardalas en
+un Excel llamado compras_marzo.xlsx
+
+Agente: Lei facturas.pdf y encontre 14 compras de marzo.
+Quiero crear el archivo "compras_marzo.xlsx" con esos datos.
+
+  Permitir esta accion? [s/n]
+
+> s
+
+Agente: Listo. Cree compras_marzo.xlsx con las 14 compras
+de marzo, columnas Fecha, Producto y Total.
+\end{verbatim}
+
+\newpage
+\section{🚀 Los "Atajos" de tu Asistente}
+El asistente tiene trucos rápidos (siempre empiezan con una barrita inclinada \texttt{/}) para hacer todo más fácil. Estos son los más útiles para empezar:
+\begin{itemize}
+    \item ❓ \textbf{\texttt{/help}} (o solo escribe \texttt{?}): Te muestra la lista completa de todos los atajos disponibles, por si se te olvida alguno.
+    \item ⚙️ \textbf{\texttt{/settings}}: Abre el menú de configuración, donde puedes cambiar el color de la pantalla, el nivel de permisos (Allow/Ask/Deny) y otras preferencias.
+    \item 🧹 \textbf{\texttt{/clear}}: Borra la conversación actual y empieza una nueva, en limpio.
+    \item 🍴 \textbf{\texttt{/fork}}: Crea una copia de la conversación actual para explorar una idea distinta, sin perder la original.
+    \item 🔓 \textbf{\texttt{/logout}}: Cierra tu sesión de la cuenta de Google (útil si vas a compartir la computadora con alguien más).
+    \item 🚪 \textbf{\texttt{/exit}}: Cierra la conversación con el asistente. Es como despedirte y colgar el teléfono. 👋
+\end{itemize}
+
+\textbf{Dato extra:} si en vez de platicar quieres pedirle una sola cosa rápida sin abrir el chat completo, puedes escribir directo en tu terminal (fuera del chat): \texttt{agy -p "tu pregunta aqui"}, y te responderá una sola vez sin quedarse esperando más mensajes. 🏎️
+
+\subsection{📦 ¿Qué son los "Artifacts"?}
+Cuando le pides algo grande a tu asistente, no solo te da una respuesta de texto: te muestra \textbf{"Artifacts"} (algo así como "pruebas de su trabajo"). Pueden ser una lista de tareas, un plan paso a paso, una captura de pantalla, o un resumen de lo que hizo. 🧾
+
+Piénsalo como cuando le pides a alguien que arregle algo en tu casa y, al terminar, te enseña fotos de antes y después. Así puedes revisar y confiar en que hizo bien el trabajo, sin tener que entender los detalles técnicos. ✅
+
+\newpage
+\section{💰 ¿Cuánto cuesta?}
+Antigravity tiene distintos planes, así que puedes empezar gratis y solo pagar si de verdad lo necesitas mucho:
+
+\begin{itemize}
+    \item 🆓 \textbf{Plan Gratis:} Puedes usar el asistente sin pagar nada. Tiene un límite de uso que se va "recargando" cada cierto tiempo (algo así como las vidas de un videojuego). Si lo usas muy seguido, puede que tengas que esperar un rato a que se recargue.
+    \item 💳 \textbf{Plan Pro (aprox. \$20 USD al mes):} Te da más usos antes de que se te acabe la "carga", ideal si lo usas seguido para trabajo.
+    \item 💎 \textbf{Planes Ultra y Ultra Max (desde \$100 USD al mes):} Pensados para quien lo usa muchísimo o de forma profesional todos los días.
+    \item 🎟️ \textbf{Créditos:} También puedes comprar créditos extra sueltos, sin necesidad de pagar una membresía completa.
+\end{itemize}
+
+\textbf{Un consejo honesto:} 🤗 los límites de uso han cambiado varias veces desde que salió, así que no te sorprendas si algún mes el plan gratis rinde un poco menos que antes. Si vas a depender de él para trabajo todos los días, vale la pena revisar los planes de pago.
+
+\newpage
+\section{😅 ¿Y si la computadora se equivoca?}
+¡No te enojes con ella! 🧘‍♀️ Si el asistente te da algo que no te gusta, solo escríbele para corregirlo, como harías con un amigo. Dile: \textit{"Oye, está muy aburrido, ponle más chistes"} 🤡 o \textit{"Te faltó sumar los precios, hazlo de nuevo"}. ¡Te entenderá a la perfección!
+
+Recuerda que entre más detalles le des sobre \textbf{qué} estuvo mal, mejor podrá corregirlo. En lugar de decir solo "está mal", intenta decir "está mal porque le faltó incluir a Carlos en la lista". 🎯
+
+\section{❓ Preguntas Frecuentes}
+
+\subsection{🙄 "No me entendió, hizo algo distinto a lo que pedí"}
+Tranquilo, le pasa hasta a las personas. 😌 Vuelve a explicarle, pero esta vez con más detalle: dile exactamente qué esperabas y qué recibiste en su lugar. Entre más ejemplos le des, mejor te entenderá la próxima vez.
+
+\subsection{🐢 "Se está tardando mucho"}
+Algunas tareas son grandes (como leer un documento gigante), así que es normal que tome unos segundos o minutos. Si tarda demasiado, puedes preguntarle "¿cómo vas?" y te dirá en qué parte del trabajo está. ⏳
+
+\subsection{😰 "Creo que borró o cambió algo que no quería"}
+No te preocupes: puedes pedirle "deshaz el último cambio" o "regresa el archivo a como estaba antes", y el asistente lo hará. Siempre es buena idea guardar una copia de tus archivos importantes antes de pedirle tareas grandes, tal como harías con cualquier programa. 💾
+
+\subsection{🤨 "¿Puedo confiar en lo que me responde?"}
+Es una IA muy lista, pero no es perfecta: a veces puede equivocarse, sobre todo con datos muy específicos (números exactos, fechas, nombres poco comunes). Para cosas importantes (dinero, salud, temas legales), siempre dale un vistazo final tú mismo antes de usar el resultado. Los "Artifacts" que vimos antes te ayudan justo para eso: revisar antes de confiar. 🔍
+
+\subsection{🔔 "¿Por qué me pide permiso para esto?"}
+Es el sistema de permisos que vimos antes (Allow / Ask / Deny) 🔐. Cuando el asistente te pregunta antes de hacer algo, es justamente para cuidarte: significa que detectó que la acción es lo bastante delicada como para necesitar tu "ok" antes de continuar. Si confías en él para ese tipo de tareas, puedes decirle que las permita automáticamente la próxima vez.
+
+\subsection{🔒 "¿Es seguro darle acceso a mis archivos?"}
+Antigravity solo trabaja dentro del "proyecto" (la carpeta) que tú le indiques, no anda revisando toda tu computadora por su cuenta. Aun así, evita compartirle contraseñas, información bancaria sensible u otros datos delicados dentro del chat, tal como no se los darías a cualquier desconocido. Vale la pena mencionar que, hasta ahora, Google todavía no ha publicado ciertas certificaciones formales de seguridad para esta herramienta (como SOC 2), así que para información muy sensible de una empresa, lo mejor es preguntar primero con el equipo de sistemas o legal de tu trabajo. 🛡️
+
+\section{📖 Glosario: Palabras Raras Explicadas Fácil}
+\begin{itemize}
+    \item \textbf{Agente:} Otro nombre para tu asistente de IA; se llama así porque no solo platica, también \textit{hace} cosas por ti.
+    \item \textbf{Proyecto:} La carpeta (o carpetas) de tu computadora donde el asistente trabaja. Es su "área de trabajo".
+    \item \textbf{Conversación:} Cada plática distinta que tienes con el asistente. Puedes tener varias, como distintos chats de WhatsApp.
+    \item \textbf{Prompt:} El mensaje o instrucción que le escribes al asistente.
+    \item \textbf{Terminal:} La "pantalla negra" de puro texto donde escribes tus mensajes al asistente.
+    \item \textbf{Artifact:} Las "pruebas de trabajo" que el asistente te muestra: listas, planes, capturas, resúmenes.
+    \item \textbf{Agent Manager:} La "mesa de control" donde puedes ver y organizar a varios asistentes trabajando a la vez.
+    \item \textbf{Subagente:} Un ayudante más pequeño que el asistente principal usa para hacer una parte específica de una tarea grande, como un empleado que manda a hacer un mandado.
+    \item \textbf{Skill:} Un "manual de instrucciones" que el asistente puede leer para saber hacer una tarea especializada.
+    \item \textbf{Hook:} Una regla automática que se activa sola en ciertos momentos, como una alarma programada.
+    \item \textbf{Plugin / Extension:} Un aditamento extra que le agrega funciones nuevas a tu asistente.
+    \item \textbf{Permiso (Allow / Ask / Deny):} El nivel de control que tú le das al asistente sobre una acción: permitirla siempre, preguntarte primero, o prohibirla por completo.
+    \item \textbf{Créditos:} Una especie de "fichas" que puedes comprar para usar el asistente más allá de tu plan mensual.
+    \item \textbf{Herramienta:} Una acción real que el asistente puede ejecutar, como leer un archivo, escribir uno nuevo, correr un comando o buscar en internet.
+    \item \textbf{TUI:} Siglas de "Terminal User Interface": la pantalla de texto con la que interactúas dentro de la terminal (el chat con el símbolo \texttt{>}).
+\end{itemize}
+
+\end{document}

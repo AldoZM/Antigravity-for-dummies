@@ -1,5 +1,5 @@
-% NOTA IMPORTANTE PARA COMPILAR: 
-% Para que los emojis se vean correctamente al generar el PDF, 
+% NOTA IMPORTANTE PARA COMPILAR:
+% Para que los emojis se vean correctamente al generar el PDF,
 % debes compilar este archivo usando XeLaTeX o LuaLaTeX.
 % Si usas Overleaf, ve a Menu -> Compiler y selecciona "XeLaTeX".
 
@@ -10,52 +10,89 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{geometry}
+\usepackage{enumitem}
 \geometry{a4paper, margin=1in}
 
-\title{✨ Antigravity CLI (AGY) for Dummies ✨\\
+\title{✨ Antigravity para Principiantes ✨\\
 \large ¡La guía más fácil para usar tu nuevo asistente mágico! 🧞‍♂️}
 \author{Aldo Zetina}
 \date{\today}
 
 \begin{document}
+\shorthandoff{"}
 
 \maketitle
 
 \begin{abstract}
-🚀 ¡Hola! Si sabes mandar un mensaje por WhatsApp o subir una foto a redes sociales, ¡ya tienes todo lo necesario para usar esta guía! 
+🚀 ¡Hola! Si sabes mandar un mensaje por WhatsApp o subir una foto a redes sociales, ¡ya tienes todo lo necesario para usar esta guía!
 
-Vamos a enseñarte a usar un asistente virtual súper inteligente (una Inteligencia Artificial). Imagina que es como tener a un pequeño genio de la lámpara en tu computadora, listo para hacer tu tarea o tu trabajo aburrido en segundos. 🪄 ¡Empecemos!
+Vamos a enseñarte a usar \textbf{Antigravity}, un asistente virtual de Google súper inteligente (una Inteligencia Artificial). Imagina que es como tener a un pequeño genio de la lámpara en tu computadora, listo para hacer tu tarea o tu trabajo aburrido en segundos. 🪄 No necesitas saber programar ni nada complicado: si sabes escribir un mensaje, ya sabes usarlo. ¡Empecemos!
 \end{abstract}
 
 \tableofcontents
 \newpage
 
 \section{👋 Conociendo a tu Asistente Mágico}
+
 \subsection{🤖 ¿Qué es una Inteligencia Artificial (IA)?}
 No te asustes con el nombre. No es un robot malo de las películas. Piénsalo como un \textbf{amigo súper rápido} con el que chateas. Tú le pides favores (como escribir un correo, resumir un cuento o arreglar una tabla de Excel) y él lo hace rapidísimo. ⚡
+
+Lo curioso es que esta IA no solo \textit{platica} contigo: también puede \textbf{hacer cosas de verdad} en tu computadora, como abrir archivos, buscar información en internet o crear documentos nuevos. Por eso decimos que es un "asistente", no solo un chat.
+
+\subsection{🧞 ¿Qué es Antigravity?}
+Antigravity es el nombre del asistente mágico que vamos a usar en esta guía. Lo hizo Google, y es como un empleado invisible que vive en tu computadora, listo para ayudarte con tareas de oficina, del hogar o de la escuela. 🏠🏢🎓
+
+Puedes usarlo de dos formas, pero ambas funcionan igual de fácil:
+\begin{itemize}
+    \item 🖥️ Una \textbf{aplicación con ventanas y botones} (como cualquier programa que ya conoces).
+    \item ⌨️ Una \textbf{terminal} (una ventana de puro texto, como veremos abajo).
+\end{itemize}
+En esta guía nos enfocamos en la terminal, porque es la forma más rápida de pedirle ayuda una vez que le pierdes el miedo. 😌
 
 \subsection{💻 ¿Qué es esa "pantalla negra"?}
 Para hablar con tu nuevo asistente, usamos algo llamado "terminal". Olvídate de hacer clic con el ratón. 🖱️ La terminal es simplemente \textbf{una ventana de chat}. Tú escribes tu mensaje ahí, aprietas la tecla \textbf{Enter}, y el asistente te responde. 💬
 
+No hay nada que puedas "romper" por escribir algo raro: si te equivocas, simplemente le explicas y ya. 🙂
+
+\subsection{📥 Instalando a tu asistente (paso a paso)}
+Antes de saludarlo, necesitas instalarlo en tu computadora. Es como instalar cualquier otro programa, no te compliques:
+
+\begin{enumerate}
+    \item Abre tu navegador (Chrome, de preferencia) y ve a la página \texttt{antigravity.google/download}. 🌐
+    \item Descarga el instalador para tu tipo de computadora (Windows, Mac o Linux).
+    \item Haz doble clic en el archivo descargado y sigue los pasos en pantalla, tal como instalarías cualquier aplicación. ✅
+    \item Cuando te lo pida, \textbf{inicia sesión con tu cuenta de Google} (la misma que usas para Gmail). Esto es para que el asistente sepa que eres tú. 🔑
+    \item Te preguntará si aceptas su política de seguridad y qué "tema" de colores prefieres (claro u oscuro). Elige el que más te guste, ¡no hay respuesta incorrecta! 🎨
+    \item Puede que te ofrezca instalar algunos "plugins" (complementos) extra. Si no sabes qué son, puedes saltarte este paso sin problema; siempre los puedes agregar después.
+\end{enumerate}
+🎉 ¡Listo! Ya tienes a tu asistente instalado y esperando tus órdenes.
+
 \subsection{🎮 Cómo abrir el chat y saludar}
-¡Es súper fácil! Solo sigue estos 3 pasos:
+¡Es súper fácil! Solo sigue estos pasos:
 \begin{enumerate}
     \item Toca la tecla \textbf{Windows} en tu teclado 🪟 (la que tiene el dibujito de la ventana).
     \item Escribe las letras \texttt{cmd} y presiona \textbf{Enter}.
-    \item Se abrirá una pantalla negra. Ahí, escribe la palabra \texttt{agy} (así se llama tu asistente) y presiona \textbf{Enter} otra vez.
+    \item Se abrirá una pantalla negra: esa es tu terminal. Ahí, escribe la palabra \texttt{antigravity} y presiona \textbf{Enter} otra vez.
 \end{enumerate}
 🎉 ¡Ta-da! Verás que tu asistente te saluda. Ya pueden empezar a platicar. Cuando quieras irte a dormir, solo escribe \texttt{/exit} y presiona Enter para cerrar el chat. 💤
 
+\subsection{📁 Un dato curioso: los "proyectos"}
+Cuando trabajas con Antigravity, todo ocurre dentro de un \textbf{proyecto}: básicamente, la carpeta (o carpetas) de tu computadora donde el asistente va a trabajar. Piénsalo como decirle "vamos a trabajar aquí, en este escritorio, no en toda la casa" 🗄️. Así el asistente sabe exactamente dónde buscar tus archivos y dónde guardar lo que hace, sin andar tocando cosas que no le pediste.
+
+\newpage
 \section{🗣️ El Arte de Pedir (Prompts)}
+
 \subsection{🤔 ¿Qué es un "prompt"?}
-¡Es una palabra elegante para decir \textbf{"mensaje"}! Cuando le escribes una instrucción a tu asistente, le estás dando un "prompt". 📝
+¡Es una palabra elegante para decir \textbf{"mensaje"}! Cuando le escribes una instrucción a tu asistente, le estás dando un "prompt". 📝 No necesitas hablarle "en computadora": puedes escribirle exactamente como le hablarías a una persona.
 
 \subsection{🍰 La receta secreta para pedir las cosas bien}
-Tu asistente es muy listo, pero no lee la mente 🧠. Si le pides las cosas a medias, no sabrá qué hacer. Un mensaje perfecto siempre tiene tres ingredientes:
+Tu asistente es muy listo, pero no lee la mente 🧠. Si le pides las cosas a medias, no sabrá qué hacer, o se lo tendrá que inventar. Un mensaje perfecto siempre tiene estos ingredientes:
+
 \begin{enumerate}
     \item \textbf{🎭 El Personaje:} Dile a quién debe imitar (ej. "Actúa como un maestro divertido" o "Como un experto en videojuegos").
     \item \textbf{🎯 La Misión:} Qué quieres que haga (ej. "Escribe un cuento", "Hazme una tabla").
-    \item \textbf{🎨 Los Detalles:} Colores, nombres, qué tono usar (¿chistoso o serio?).
+    \item \textbf{🎨 Los Detalles:} Colores, nombres, qué tono usar (¿chistoso o serio?), y cualquier dato que solo tú sabes (fechas, nombres de personas, etc.).
+    \item \textbf{📎 El Contexto:} Si tienes un archivo, foto o documento relacionado, ¡dile dónde está! Así no tiene que adivinar de qué le estás hablando.
 \end{enumerate}
 
 \subsection{🌟 Ejemplos: De aburrido a increíble}
@@ -66,29 +103,97 @@ Mira cómo cambia si le pides que escriba un correo:
     \item ✅ \textbf{Mensaje Excelente:} "Actúa como un empleado muy amable. Escribe un correo cortito para mi jefe Carlos pidiendo vacaciones del 10 al 15 de agosto. Dile que dejaré mi trabajo terminado. Usa un tono muy respetuoso." 🏆
 \end{itemize}
 
+\subsection{🧭 Prompts para cada parte de tu vida}
+Aquí tienes ejemplos listos para copiar y adaptar, organizados por área. ¡Solo cámbiales los datos por los tuyos! ✂️
+
+\subsubsection{🏢 En la oficina}
+\begin{itemize}
+    \item \textit{"Actúa como mi asistente de oficina. Resume este documento de 10 páginas en 5 puntos clave, con un tono profesional."}
+    \item \textit{"Revisa el borrador de este correo y hazlo sonar más formal, sin cambiar lo que dice."}
+    \item \textit{"Toma las notas de esta junta y conviértelas en una lista de tareas pendientes, con quién es responsable de cada una."}
+\end{itemize}
+
+\subsubsection{🏠 En el hogar}
+\begin{itemize}
+    \item \textit{"Actúa como un chef amigable. Dame una receta fácil para cenar con lo que tengo: pollo, arroz y brócoli."}
+    \item \textit{"Hazme una lista del súper para la semana, organizada por pasillo del supermercado."}
+    \item \textit{"Ayúdame a planear el cumpleaños de mi hija de 7 años: dame ideas de tema, decoración y juegos."}
+\end{itemize}
+
+\subsubsection{🎓 En los estudios}
+\begin{itemize}
+    \item \textit{"Actúa como un profesor paciente. Explícame qué es la fotosíntesis como si tuviera 12 años."}
+    \item \textit{"Resume este artículo largo en un párrafo, sin quitarle las ideas importantes."}
+    \item \textit{"Hazme 5 preguntas de repaso sobre la Revolución Mexicana para estudiar para mi examen."}
+\end{itemize}
+
+\newpage
 \section{📊 ¡Magia con Excel y Archivos!}
+
 \subsection{🦸‍♂️ Tu asistente al rescate}
-¿Odias copiar y pegar cosas aburridas? 😴 ¡Tu asistente lo hace por ti! Puede leer documentos gigantes y pasarlos a Excel solitos. 
+¿Odias copiar y pegar cosas aburridas? 😴 ¡Tu asistente lo hace por ti! Puede leer documentos gigantes y pasarlos a Excel solito, sin que tú muevas un dedo.
 
 \subsection{✨ Trucos que puede hacer por ti}
 \begin{itemize}
     \item 📄➡️📗 \textbf{De PDF a Excel:} "Lee este PDF larguísimo y pon todas las tablas en un Excel."
     \item 🧹 \textbf{Limpiar basura:} "Lee mi Excel y borra todos los renglones repetidos."
     \item 🗂️ \textbf{Ordenar cosas:} "Toma esta lista de 100 dulces y agrúpalos por colores."
+    \item 🧮 \textbf{Sumar y calcular:} "Suma el total de gastos de este mes y dime cuál categoría gasté más."
+    \item 📸 \textbf{De foto a texto:} "Aquí hay una foto de un recibo, pásame los datos a una tabla."
 \end{itemize}
 
 \subsection{📝 Cómo pedirle que trabaje con Excel}
 \textbf{Ejemplo de un Mensaje Excelente:}\\
 \textit{"Actúa como mi ayudante. 🙋‍♂️ Lee el archivo 'facturas.pdf' que tengo guardado. Busca todas las compras de marzo. Saca solo las columnas de 'Fecha', 'Producto' y 'Total', y guarda todo en un nuevo archivo de Excel llamado 'compras\_marzo.xlsx'."} 📂
 
+Fíjate que el mensaje le dice \textbf{qué archivo leer}, \textbf{qué buscar} y \textbf{cómo se debe llamar el resultado}. Entre más claro seas con estos tres datos, mejor te va a salir. 👍
+
+\newpage
 \section{🚀 Los "Atajos" de tu Asistente}
 El asistente tiene trucos rápidos (siempre empiezan con una barrita inclinada \texttt{/}) para hacer todo más fácil:
 \begin{itemize}
-    \item 🗺️ \textbf{\texttt{/plan}}: Úsalo cuando la tarea es gigante. Significa: "Antes de hacer nada, cuéntame cuál es tu plan paso a paso".
-    \item 🏁 \textbf{\texttt{/goal}}: Significa: "Concéntrate 100\% en terminar esto y no te detengas hasta lograrlo".
+    \item 🌐 \textbf{\texttt{/browser}}: Le pide al asistente que abra su propio navegador y navegue por internet por ti: buscar información, revisar una página, o probar algo en línea, mientras tú ves lo que va haciendo. 👀
+    \item ⏰ \textbf{\texttt{/schedule}}: Sirve para programar tareas que se repiten o que quieres que pasen en un momento específico. Por ejemplo: "todos los lunes a las 8am, revisa mi correo y hazme un resumen". 📅
+    \item 🚪 \textbf{\texttt{/exit}}: Cierra la conversación con el asistente. Es como despedirte y colgar el teléfono. 👋
 \end{itemize}
 
+\subsection{📦 ¿Qué son los "Artifacts"?}
+Cuando le pides algo grande a tu asistente, no solo te da una respuesta de texto: te muestra \textbf{"Artifacts"} (algo así como "pruebas de su trabajo"). Pueden ser una lista de tareas, un plan paso a paso, una captura de pantalla, o un resumen de lo que hizo. 🧾
+
+Piénsalo como cuando le pides a alguien que arregle algo en tu casa y, al terminar, te enseña fotos de antes y después. Así puedes revisar y confiar en que hizo bien el trabajo, sin tener que entender los detalles técnicos. ✅
+
+\newpage
 \section{😅 ¿Y si la computadora se equivoca?}
 ¡No te enojes con ella! 🧘‍♀️ Si el asistente te da algo que no te gusta, solo escríbele para corregirlo, como harías con un amigo. Dile: \textit{"Oye, está muy aburrido, ponle más chistes"} 🤡 o \textit{"Te faltó sumar los precios, hazlo de nuevo"}. ¡Te entenderá a la perfección!
+
+Recuerda que entre más detalles le des sobre \textbf{qué} estuvo mal, mejor podrá corregirlo. En lugar de decir solo "está mal", intenta decir "está mal porque le faltó incluir a Carlos en la lista". 🎯
+
+\section{❓ Preguntas Frecuentes}
+
+\subsection{🙄 "No me entendió, hizo algo distinto a lo que pedí"}
+Tranquilo, le pasa hasta a las personas. 😌 Vuelve a explicarle, pero esta vez con más detalle: dile exactamente qué esperabas y qué recibiste en su lugar. Entre más ejemplos le des, mejor te entenderá la próxima vez.
+
+\subsection{🐢 "Se está tardando mucho"}
+Algunas tareas son grandes (como leer un documento gigante), así que es normal que tome unos segundos o minutos. Si tarda demasiado, puedes preguntarle "¿cómo vas?" y te dirá en qué parte del trabajo está. ⏳
+
+\subsection{😰 "Creo que borró o cambió algo que no quería"}
+No te preocupes: puedes pedirle "deshaz el último cambio" o "regresa el archivo a como estaba antes", y el asistente lo hará. Siempre es buena idea guardar una copia de tus archivos importantes antes de pedirle tareas grandes, tal como harías con cualquier programa. 💾
+
+\subsection{🤨 "¿Puedo confiar en lo que me responde?"}
+Es una IA muy lista, pero no es perfecta: a veces puede equivocarse, sobre todo con datos muy específicos (números exactos, fechas, nombres poco comunes). Para cosas importantes (dinero, salud, temas legales), siempre dale un vistazo final tú mismo antes de usar el resultado. Los "Artifacts" que vimos antes te ayudan justo para eso: revisar antes de confiar. 🔍
+
+\subsection{🔒 "¿Es seguro darle acceso a mis archivos?"}
+Antigravity solo trabaja dentro del "proyecto" (la carpeta) que tú le indiques, no anda revisando toda tu computadora por su cuenta. Aun así, evita compartirle contraseñas, información bancaria sensible u otros datos delicados dentro del chat, tal como no se los darías a cualquier desconocido. 🛡️
+
+\section{📖 Glosario: Palabras Raras Explicadas Fácil}
+\begin{itemize}
+    \item \textbf{Agente:} Otro nombre para tu asistente de IA; se llama así porque no solo platica, también \textit{hace} cosas por ti.
+    \item \textbf{Proyecto:} La carpeta (o carpetas) de tu computadora donde el asistente trabaja. Es su "área de trabajo".
+    \item \textbf{Conversación:} Cada plática distinta que tienes con el asistente. Puedes tener varias, como distintos chats de WhatsApp.
+    \item \textbf{Prompt:} El mensaje o instrucción que le escribes al asistente.
+    \item \textbf{Terminal:} La "pantalla negra" de puro texto donde escribes tus mensajes al asistente.
+    \item \textbf{Artifact:} Las "pruebas de trabajo" que el asistente te muestra: listas, planes, capturas, resúmenes.
+    \item \textbf{Subagente:} Un ayudante más pequeño que el asistente principal usa para hacer una parte específica de una tarea grande, como un empleado que manda a hacer un mandado.
+\end{itemize}
 
 \end{document}
